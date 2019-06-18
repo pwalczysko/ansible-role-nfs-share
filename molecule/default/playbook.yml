@@ -25,7 +25,7 @@
           - host: "*"
             options: "rw,fsid=0"
 
-    - role: openmicroscopy.nfs-mount
+    - role: ome.nfs_mount
       nfs_share_mounts:
         - path: /mnt/rw
           location: localhost:/share

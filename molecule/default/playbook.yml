@@ -24,21 +24,21 @@
     - role: ansible-role-nfs-share
       nfs_shares:
         /srv/ro:
-        - host: "*"
-          options: 'ro'
+          - host: "*"
+            options: 'ro'
         /srv/rw:
-        - host: "*"
-          options: 'rw'
+          - host: "*"
+            options: 'rw'
 
 # Testing
 - hosts: all
   roles:
     - role: openmicroscopy.nfs-mount
       nfs_share_mounts:
-      - path: /mnt/ro
-        location: localhost:/srv/ro
-        # Deliberately mount rw so we can check ro is enforced by server
-        opts: rw
-      - path: /mnt/rw
-        location: localhost:/srv/rw
-        opts: rw
+        - path: /mnt/ro
+          location: localhost:/srv/ro
+          # Deliberately mount rw so we can check ro is enforced by server
+          opts: rw
+        - path: /mnt/rw
+          location: localhost:/srv/rw
+          opts: rw

@@ -2,5 +2,5 @@
 # Handlers for nfs-share
 
 - name: refresh nfs
-  become: yes
+  become: true
   command: exportfs -ar

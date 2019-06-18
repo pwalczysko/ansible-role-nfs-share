@@ -1,6 +1,9 @@
 NFS Share
 =========
 
+[![Build Status](https://travis-ci.org/ome/ansible-role-nfs-share.svg)](https://travis-ci.org/ome/ansible-role-nfs-share)
+[![Ansible Role](https://img.shields.io/ansible/role/41354.svg)](https://galaxy.ansible.com/ome/nfs_share/)
+
 Manage NFS file shares (no authentication).
 
 Note if SELinux is enabled you may need modify the configure of the the shared directories (not handled by this role).
@@ -19,7 +22,7 @@ Example Playbook
 
     - hosts: localhost
       roles:
-      - role: nfs-share
+      - role: ome.nfs_share
         nfs_shares:
           # Allow access from *.example.org with default options
           /srv/share1:

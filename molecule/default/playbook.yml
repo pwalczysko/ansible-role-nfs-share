@@ -14,31 +14,19 @@
         state: directory
         owner: test
       with_items:
-        - /srv/ro
-        - /srv/rw
-        - /mnt/ro
+        - /srv/share
         - /mnt/rw
 
   roles:
 
     - role: ansible-role-nfs-share
       nfs_shares:
-        /srv/ro:
+        /srv:
           - host: "*"
-            options: 'ro'
-        /srv/rw:
-          - host: "*"
-            options: 'rw'
+            options: "rw,fsid=0"
 
-# Testing
-- hosts: all
-  roles:
     - role: openmicroscopy.nfs-mount
       nfs_share_mounts:
-        - path: /mnt/ro
-          location: localhost:/srv/ro
-          # Deliberately mount rw so we can check ro is enforced by server
-          opts: rw
         - path: /mnt/rw
-          location: localhost:/srv/rw
+          location: localhost:/share
           opts: rw

@@ -6,14 +6,6 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_readonly(host):
-    f = '/mnt/ro/hello'
-    with host.sudo('test'):
-        c = host.run('touch %s', f)
-    assert c.rc == 1
-    assert not host.file(f).exists
-
-
 def test_readwrite(host):
     f = '/mnt/rw/hello'
     with host.sudo('test'):

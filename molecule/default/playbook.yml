@@ -20,7 +20,7 @@
 
   roles:
 
-    - role: ansible-role-nfs-share
+    - role: ome.nfs_share
       nfs_shares:
         /srv:
           - host: "*"

@@ -2,7 +2,7 @@ NFS Share
 =========
 
 [![Actions Status](https://github.com/ome/ansible-role-nfs-share/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-nfs-share/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41354.svg)](https://galaxy.ansible.com/ome/nfs_share/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-nfs_share-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/nfs_share/)
 
 Manage NFS file shares (no authentication).
 

@@ -1,2 +1,2 @@
 ---
-- src: ome.nfs_mount
+- name: ome.nfs_mount

@@ -10,7 +10,7 @@ galaxy_info:
     - name: EL
       versions:
         - 9
-  namespace: ome
+  namespace: pwalczysko
   galaxy_tags: []
 
 dependencies: []

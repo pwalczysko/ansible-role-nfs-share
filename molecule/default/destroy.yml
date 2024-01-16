@@ -16,5 +16,5 @@
   tasks:
     - name: Remove dynamic inventory file
       ansible.builtin.file:
-        path: "{{ molecule_ephemeral_directory }}/inventory/molecule_inventory.yml"
+        path: "{{ molecule_ephemeral_directory }}/inventory/molecule_inventory.yml"  # noqa
         state: absent

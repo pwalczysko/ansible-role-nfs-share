@@ -10,7 +10,7 @@
 
 - name: nfs server | configure shares
   become: true
-  template:
+  ansible.builtin.template:
     backup: true
     dest: /etc/exports
     src: exports.j2
@@ -20,7 +20,7 @@
 
 - name: nfs server | enable nfs
   become: true
-  service:
+  ansible.builtin.service:
     enabled: true
     name: nfs-server
     state: started

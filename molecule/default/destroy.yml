@@ -12,7 +12,7 @@
 
 - name: Remove dynamic molecule inventory
   hosts: localhost
-  ansible.builtin.gather_facts: false
+  gather_facts: false
   tasks:
     - name: Remove dynamic inventory file
       ansible.builtin.file:

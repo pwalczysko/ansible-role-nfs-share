@@ -1,2 +1,6 @@
 ---
-- name: ome.nfs_mount
+
+# - name: ome.nfs_mount
+- name: nfs_mount
+  src: https://github.com/khaledk2/ansible-role-nfs-mount
+  version: update_ansibel
